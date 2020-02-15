@@ -1,15 +1,14 @@
 //linearsearch & binary search
 #include<stdio.h>
 #include<stdlib.h>
-#include<stdlib.h>
 void main()
 {
   //***************declaring section****************************
   int a[100],n,item,loc,choise;//decaring array , item &locaion
-  int linear_search(int[],int,int);//function declaration
-  int binary_search(int[],int,int);//function declaration
-  void getdata(int [],int);//getting data from the user
-  void putdata(int [],int);//display stored data
+  int linear_search(int[],int,int);//function declaration using argument list :array,range of array,searching item.
+  int binary_search(int[],int,int);//function declaration using argument list: array,range of array,searching item.
+  void getdata(int [],int);//getting data from the user using argument list :array ,item .
+  void putdata(int [],int);//display stored data using argument list : array,range of array.
   
   //****************declaring section end************************
   
@@ -44,9 +43,9 @@ void main()
       printf("\nitem is not found!!!! .please type correct item");
     }
 
- }
+  }//ending while
 
-}
+}//ending main
 
 //*************************************sub-section*****************************************
   
@@ -69,7 +68,7 @@ void main()
      {
        return i;
      } 
-  }
+  }//ending for loop
   return -1;
 }
  
@@ -77,10 +76,10 @@ int binary_search(int x[],int n,int item)//binary search
 {
   int beg=0,end,mid;//variable declaration 'beg' for beginning element & end for ending element.
   
-  end=n-1;
+  end=n-1;// consider end  initially at the end of indices of array.
   while(beg<=end)
   {
-    mid=beg+end;
+    mid=(beg+end)/2;
     if(x[mid]==item)
     {
      return mid;
@@ -93,8 +92,8 @@ int binary_search(int x[],int n,int item)//binary search
     {
      beg=mid+1;
     }
-  }
+  }//ending while
   return -1;
-}
+}//ending function
 //***********************************sub-section end*************************************
 
