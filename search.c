@@ -4,7 +4,7 @@
 void main()
 {
   //***************declaring section****************************
-  int a[100],n,item,loc,choise;//decaring array , item &locaion
+  int a[100],n,item,loc,choice;//decaring array , item &locaion
   int linear_search(int[],int,int);//function declaration using argument list :array,range of array,searching item.
   int binary_search(int[],int,int);//function declaration using argument list: array,range of array,searching item.
   void getdata(int [],int);//getting data from the user using argument list :array ,item .
@@ -21,10 +21,10 @@ void main()
   while(1)
   {
   printf("enter your choice");
-  scanf("%d",&choise);//get choice from the user what is want to call which type of search
+  scanf("%d",&choice);//get choice from the user what is want to call which type of search
 
    
-  switch(choise)// take choice from the user
+  switch(choice)// take choice from the user
    {
     case 1: loc=linear_search(a,n,item);
            break;
